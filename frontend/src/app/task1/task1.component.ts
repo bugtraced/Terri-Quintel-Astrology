@@ -205,7 +205,7 @@ import { ChartService, Chart } from '../services/chart.service';
           <button (click)="closeEditModal()" class="modal-close">×</button>
         </div>
         <div class="modal-body">
-          <form (ngSubmit)="saveChart()" class="edit-form">
+          <form *ngIf="editingChart" (ngSubmit)="saveChart()" class="edit-form">
             <div class="form-group">
               <label>Chart Name:</label>
               <input
